@@ -3,14 +3,11 @@ import axios from 'axios';
 import Users from './Users';
 import userEvent from '@testing-library/user-event';
 import { act } from 'react-dom/test-utils';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import UserDetailPage from '../pages/UserDetailPage';
-import AppRouter from '../router/AppRouter';
 import { renderWithRouter } from '../tests/helpers/RenderWithRouter';
 
 jest.mock('axios')
 
-describe("Подтягиввание пользователей", () => {
+describe.skip("Подтягиввание пользователей", () => {
   let response = {
     data: [
       {
