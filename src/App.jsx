@@ -30,20 +30,15 @@
 // export default App;
 
 import React from 'react'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
-import MainPage from './pages/MainPage'
-import AboutPage from './pages/AboutPage'
+import AppRouter from './router/AppRouter'
+import Navbar from './components/Navbar/Navbar'
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Link data-testid="main-link" to={'/'}>main</Link>
-      <Link data-testid="about-link" to={'/about'}>about</Link>
-      <Routes>
-        <Route path='/' element={<MainPage />}></Route>
-        <Route path='/about' element={<AboutPage />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Navbar />
+      <AppRouter />
+    </div>
   )
 }
 
