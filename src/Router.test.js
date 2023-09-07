@@ -1,4 +1,5 @@
-import { render, screen, act } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
+import { act } from 'react-dom/test-utils';
 import userEvent from "@testing-library/user-event"
 import App from "./App"
 // import { act } from "react-dom/test-utils"
@@ -12,9 +13,13 @@ describe("Тест роутера", () => {
         })
         const mainLink = screen.getByTestId('main-link')
         const aboutLink = screen.getByTestId('about-link')
-        userEvent.click(aboutLink)
+        await act(async () => {
+            userEvent.click(aboutLink)
+        })
         expect(screen.getByTestId('about-page')).toBeInTheDocument()
-        userEvent.click(mainLink)
+        await act(async () => {
+            userEvent.click(mainLink)
+        })
         expect(screen.getByTestId('main-page')).toBeInTheDocument()
     })
 })
