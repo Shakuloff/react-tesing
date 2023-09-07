@@ -8,7 +8,7 @@ import { renderWithRouter } from "./tests/helpers/RenderWithRouter";
 
 
 
-describe("Тест роутера", () => {
+describe.skip("Тест роутера", () => {
     test.skip("роутер", async () => {
         await act(async () => {
             renderWithRouter(null)

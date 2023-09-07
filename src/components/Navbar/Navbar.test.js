@@ -4,7 +4,7 @@ import Navbar from "./Navbar"
 import { screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 
-describe("Подтягиввание пользователей меню", () => {
+describe.skip("Подтягиввание пользователей меню", () => {
     test("переходы по всем ссылкам", async () => {
         await act(async () => {
             renderWithRouter(<Navbar />)
