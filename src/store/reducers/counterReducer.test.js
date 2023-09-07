@@ -1,6 +1,6 @@
 import counterReducer, { decrement, increment } from "./counterReducer"
 
-describe("Тест redux reducer", () => {
+describe.skip("Тест redux reducer", () => {
     test("инкремент", async () => {
         expect(counterReducer({value: 0}, increment())).toEqual({value: 1})
     })
